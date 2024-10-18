@@ -1,4 +1,4 @@
-.PHONY: init run dev test
+.PHONY: init run dev build test
 
 init:
 	python3 -m venv .venv \
@@ -6,11 +6,10 @@ init:
 	&& pip install -r requirements.txt
 
 run dev:
-	if [ "${VIRTUAL_ENV}" != "" ]; then \
-		fastapi dev camdn/main.py; \
-	else \
-		. .venv/bin/activate && fastapi dev camdn/main.py && deactivate; \
-	fi
+	docker compose up
+
+run dev build:
+	docker compose up --build
 
 test:
 	py.test tests
