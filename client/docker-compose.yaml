@@ -1,0 +1,9 @@
+name: camdn
+
+services:
+  camdn-client:
+    build: .
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/usr/camdn
