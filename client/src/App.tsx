@@ -8,7 +8,7 @@ function App() {
   const [greet, setGreet] = useState("Vite + React");
 
   const fetchData = async () => {
-    const res = await fetch("http://localhost:8000");
+    const res = await fetch("/api/");
     const res_json = await res.json();
     return res_json;
   };

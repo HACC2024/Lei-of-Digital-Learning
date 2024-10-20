@@ -1,6 +1,12 @@
 name: camdn
 
 services:
+  camdn-api:
+    build: ./api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./api/camdn:/usr/camdn
   camdn-client:
     build: ./client
     depends_on:
@@ -11,9 +17,15 @@ services:
       - "5173:5173"
     volumes:
       - ./client:/usr/camdn
-  camdn-api:
-    build: ./api
+  camdn-proxy:
+    build: ./proxy
+    depends_on:
+      camdn-api:
+        condition: service_started
+        restart: true
+      camdn-client:
+        condition: service_started
+        restart: true
+    restart: unless-stopped
     ports:
-      - "8000:8000"
-    volumes:
-      - ./api/camdn:/usr/camdn
+      - "8080:80"
