@@ -16,7 +16,7 @@ services:
     ports:
       - "5173:5173"
     volumes:
-      - ./client:/usr/camdn
+      - ./client/src:/usr/camdn/src
   camdn-proxy:
     build: ./proxy
     depends_on:
