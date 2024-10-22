@@ -5,10 +5,27 @@ function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
-    const handleSubmit = (event: React.FormEvent) => {
+    const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
-        // API call to authenticate user?
-        console.log("Username:", username, "Password:", password);
+        try {
+            const response = await fetch("/api/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ username, password }),
+            });
+
+            if(!response.ok) {
+                throw new Error("Login failed");
+            }
+            
+            const data = await response.json();
+            console.log("Token:", data.token);
+        } catch (error) {
+            console.error("Error:", error);
+        
+        }
     };
 
     return (
