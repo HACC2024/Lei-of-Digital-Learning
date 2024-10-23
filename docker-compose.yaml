@@ -8,6 +8,7 @@ services:
     volumes:
       - ./api/camdn:/usr/camdn
     env_file: "./api/.env"
+    restart: unless-stopped
   camdn-client:
     build: ./client
     depends_on:
@@ -18,6 +19,17 @@ services:
       - "5173:5173"
     volumes:
       - ./client/src:/usr/camdn/src
+  camdn-db:
+    image: postgres
+    environment:
+      POSTGRES_USER: camdn
+      POSTGRES_PASSWORD: camdnTest
+      PGDATA: /data/postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db/data:/data/postgres
+    restart: unless-stopped
   camdn-proxy:
     build: ./proxy
     depends_on:
