@@ -30,7 +30,8 @@ function Login() {
 
     return (
         <form onSubmit={handleSubmit}>
-            <div>
+            <h1>CamDN Login</h1>
+            <div className='login-container'>
                 {/* Input for username */}
                 <label htmlFor="username">Username:</label>
                 <input type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} />

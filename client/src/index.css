@@ -24,10 +24,34 @@ a:hover {
 
 body {
   margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 80px 1fr 60px;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.header {
+  background-color: darkgray;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  padding: 1rem;
+}
+
+.footer {
+  background-color: darkgrey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
