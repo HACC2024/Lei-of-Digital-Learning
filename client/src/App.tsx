@@ -6,7 +6,6 @@ import "./App.css";
 import Login from "./components/Login.tsx";
 
 function App() {
-  const [count, setCount] = useState(0);
   const [greet, setGreet] = useState("Vite + React");
 
   const fetchData = async () => {
