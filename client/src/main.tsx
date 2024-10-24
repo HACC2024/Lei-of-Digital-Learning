@@ -1,6 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
+import Header from './components/Header.tsx'
+import Footer from './components/Footer.tsx'
 import './index.css'
 
 createRoot(document.getElementById('root')!).render(
@@ -8,7 +10,7 @@ createRoot(document.getElementById('root')!).render(
     <div className='container'>
 
       <header className='header'>
-        {/* Header component to be shared across the app, inside will handle conditional rendering*/}  
+        <Header />
       </header>
 
       <main className='main'>
@@ -16,7 +18,7 @@ createRoot(document.getElementById('root')!).render(
       </main>
 
       <footer className='footer'>
-        {/* Footer component to be shared across the app, inside will handle conditional rendering*/}
+        <Footer />
       </footer>
 
     </div>
