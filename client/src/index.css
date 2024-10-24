@@ -38,7 +38,7 @@ body {
 the header, main, and footer. Each nested with their own css */
 .container {
   display: grid;
-  grid-template-rows: 80px 1fr 60px;
+  grid-template-rows: 80px 1fr 55px;
   height: 100vh;
   overflow-y: auto;
 }
@@ -56,6 +56,8 @@ inside of the respective file/componenet. */
 /* Reinforcing placement to ensure no weirdness */
 .footer {
   grid-row: 3;
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
