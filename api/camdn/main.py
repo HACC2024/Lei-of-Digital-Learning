@@ -11,7 +11,7 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
-origins = ["http://localhost", "http://localhost:5173", "http://localhost:8000"]
+origins = ["http://localhost:8080"]
 
 if "GREET_NAME" not in environ:
     greet_name = "World"
@@ -20,7 +20,7 @@ else:
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
