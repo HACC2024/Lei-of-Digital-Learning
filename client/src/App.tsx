@@ -1,10 +1,9 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "./App.css";
 
 import Login from "./components/Login.tsx";
 
 function App() {
-  const [greet, setGreet] = useState("Vite + React");
 
   const fetchData = async () => {
     const res = await fetch("/api/");
@@ -16,9 +15,6 @@ function App() {
     async function runEffect() {
       const json_res = await fetchData();
       console.log(json_res);
-      const firstKey = Object.keys(json_res)[0];
-      const newGreet = `${firstKey} ${json_res[firstKey]}`;
-      setGreet(newGreet);
     }
     runEffect();
   }, []);
@@ -27,7 +23,6 @@ function App() {
     <>
       <div className="main-content">
         <Login />
-        <h1>{greet}</h1>
       </div>
     </>
   );

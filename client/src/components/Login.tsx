@@ -33,11 +33,15 @@ function Login() {
             <h1>CamDN Login</h1>
             <div className='login-container'>
                 {/* Input for username */}
-                <label htmlFor="username">Username:</label>
-                <input type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} />
+                <section>
+                    <label htmlFor="username">Username:</label>
+                    <input type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} />
+                </section>                
                 {/* Input for password */}
-                <label htmlFor="password">Password:</label>
-                <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                <section>
+                    <label htmlFor="password">Password:</label>
+                    <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                </section>
             </div>
             <button type="submit">Login</button>
         </form>
