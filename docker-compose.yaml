@@ -20,7 +20,7 @@ services:
     volumes:
       - ./client/src:/usr/camdn/src
   camdn-db:
-    image: postgres
+    image: postgis/postgis:17-3.5
     environment:
       POSTGRES_USER: camdn
       POSTGRES_PASSWORD: camdnTest
