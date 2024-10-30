@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import "./App.css";
 
 import Login from "./components/Login.tsx";
+import Home from "./components/Home.tsx";
 
 function App() {
 
@@ -22,7 +23,8 @@ function App() {
   return (
     <>
       <div className="main-content">
-        <Login />
+        {/* <Login /> */}
+        <Home />
       </div>
     </>
   );
