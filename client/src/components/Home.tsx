@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './css/Home.css'; 
+import EventList from '../components/EventList';
 
 const Home = () => {
   const [events, setEvents] = useState([]);
@@ -28,13 +29,13 @@ const Home = () => {
   }, []);
 
   const days = [
-    { name: 'Monday', date: 'Oct 23' },
-    { name: 'Tuesday', date: 'Oct 24' },
-    { name: 'Wednesday', date: 'Oct 25' },
-    { name: 'Thursday', date: 'Oct 26' },
-    { name: 'Friday', date: 'Oct 27' },
-    { name: 'Saturday', date: 'Oct 28' },
-    { name: 'Sunday', date: 'Oct 29' },
+    { name: 'Monday', date: 'October 23, 2024' },
+    { name: 'Tuesday', date: 'October 24, 2024' },
+    { name: 'Wednesday', date: 'October 25, 2024' },
+    { name: 'Thursday', date: 'October 26, 2024' },
+    { name: 'Friday', date: 'October 27, 2024' },
+    { name: 'Saturday', date: 'October 28, 2024' },
+    { name: 'Sunday', date: 'October 29, 2024' },
   ];
 
   const toggleDaySelection = (dayName: string) => {
@@ -57,6 +58,7 @@ const Home = () => {
           ))}
         </ul>
       </nav>
+      <EventList selectedDay={selectedDay} events={events} days={days} />
     </div>
   );
 };
