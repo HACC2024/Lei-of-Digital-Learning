@@ -1,4 +1,5 @@
 import React from 'react';
+import './css/EventList.css'
 
 interface Event {
   id: number;
@@ -25,7 +26,7 @@ const EventList: React.FC<EventListProps> = ({ selectedDay, events, days }) => {
   return (
     <div className="events-container">
       {getEventsForSelectedDay().map(event => (
-        <div key={event.id} className="event">
+        <div key={event.id} className="event-card">
           <h3>{event.title}</h3>
           <p>{event.description}</p>
           <p>{event.time}</p>

@@ -1,21 +1,30 @@
 /* Home Component Styles */
 .home-container {
-  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  justify-content: center;
+}
+
+.event-list-container{
+  padding: 20px;
 }
 
 .weekly-calender {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 1500px;
   font-weight: bold;
 }
 
-.weekly-calender ul {
+.week-days {
   display: flex;
+  flex-direction: row;
 }
 
-.weekly-calender li {
+.week-days li {
   cursor: pointer;
   padding: 10px;
   margin: 10px;
@@ -24,17 +33,16 @@
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+.weekly-calender button {
+  align-items: baseline;
+  border-radius: 50px;
+}
 .weekly-calender li.selected {
   background-color: rgba(128, 0, 128, 0.192);  
   box-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
 }
 
+/* TODO:  */
 @media (max-width: 768px) {
-  .announcements {
-    width: 90%;
-  }
-
-  .events-grid {
-    grid-template-columns: 1fr;
-  }
+  
 }

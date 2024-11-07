@@ -1,0 +1,47 @@
+/* EventList.css */
+.events-container {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .event-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .event-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+    color: #333333;
+  }
+  
+  .event-card p {
+    font-size: 0.9rem;
+    color: #666666;
+    margin: 4px 0;
+  }
+  
+  /* location Name */
+  .event-card p:last-of-type {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+
+  /* TODO: */
+  @media (max-width: 768px) {
+    
+  }
+  

@@ -1,3 +1,13 @@
+/* Footer.css */
+
 .footer {
-  background-color: #333;
+  color: #f0f0f0;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* TODO: */
+@media (max-width: 768px) {
+  
 }
