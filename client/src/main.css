@@ -77,10 +77,8 @@ body {
   height: 100vh;
 }
 .header {
+  width: 100%;
   grid-row: 1;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
   padding: 5px;
   background-color: #7c6344dc;
 }

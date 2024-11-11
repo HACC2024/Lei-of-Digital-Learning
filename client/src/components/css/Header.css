@@ -1,5 +1,10 @@
-.menu {
-  
+article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {  
   background-color: #8b847c73;  
   box-shadow: 0 0 10px #584329dc;
   border-radius: 25px;

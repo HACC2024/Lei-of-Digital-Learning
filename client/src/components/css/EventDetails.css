@@ -1,0 +1,36 @@
+.selection {
+  display: flex;
+  gap: 5px;
+}
+
+.event-detail-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 5px;
+    background-color: #7c634474;  
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.event-detail-container h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.event-detail-container p {
+    font-size: 0.9rem;
+    color: #666666;
+    margin: 0px;
+}
+
+.event-detail-container button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

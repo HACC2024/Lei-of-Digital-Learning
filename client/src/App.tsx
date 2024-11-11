@@ -1,33 +1,22 @@
-import { useEffect } from "react";
-import "./App.css";
-
-import Login from "./components/Login.tsx";
-import Home from "./components/Home.tsx";
+import { Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import Contact from './components/Contact';
+import Login from './components/Login';
+import Register from './components/Register';
+import NotFound from './components/NotFound';
 
 function App() {
-
-  const fetchData = async () => {
-    const res = await fetch("/api/");
-    const res_json = await res.json();
-    return res_json;
-  };
-
-  useEffect(() => {
-    async function runEffect() {
-      const json_res = await fetchData();
-      console.log(json_res);
-    }
-    runEffect();
-  }, []);
-
-  return (
-    <>
-      <div className="main-content">
-        {/* <Login /> */}
-        <Home />
-      </div>
-    </>
-  );
+    return (
+        <main className="main-content">
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="*" element={<NotFound />} />
+            </Routes>
+        </main>
+    );
 }
 
 export default App;
