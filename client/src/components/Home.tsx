@@ -73,7 +73,6 @@ const Home = () => {
   return (
     <div className="home-container">
 
-      {/* ------------LOCATION-------------- */}
       <div className='location-selector'>
         <select value={selectedLocation} onChange={e => setSelectedLocation(e.target.value)}>
           <option value="">Select a Location</option>
@@ -83,7 +82,6 @@ const Home = () => {
         </select>
       </div>
       
-      {/* ------------CALENDER-------------- */}
       <nav className="weekly-calender">
         <button onClick={goToPreviousWeek}>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -109,7 +107,6 @@ const Home = () => {
         </button>
       </nav>
 
-      {/* ------------EVENTS-------------- */}
       <div className="event-list-container">
         <EventList selectedDay={selectedDay} events={events} days={days} />
       </div>

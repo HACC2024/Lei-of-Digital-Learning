@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .event-list-container{
@@ -16,7 +17,6 @@
   justify-content: center;
   background-color: transparent;
   box-shadow: none;
-  max-width: 1500px;
   font-weight: bold;
 }
 
