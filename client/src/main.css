@@ -66,31 +66,22 @@ button {
 
 
 /* General Layout */
-body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
 .container {
-  display: grid;
-  grid-template-rows: 80px 1fr 55px;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .header {
-  width: 100%;
-  grid-row: 1;
   padding: 5px;
-  background-color: #7c6344dc;
 }
 .app {
-  overflow-y: auto;
+  padding: 5px  ;
 }
+
 .footer {
-  grid-row: 3;
-  padding: 0;
-  margin: 0;
   background-color: #7c6344dc;
-  color: #000000;
+  border-radius: 25vmax;
+  align-items: baseline;
 }
 /* --------------- */
 
