@@ -57,8 +57,7 @@ button {
   border-radius: 8px;
   padding: 10px 16px;
   color: #ffffff;
-  background-color: #7c634475;  
-  box-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
+  background-color: #7c634475;
   border: none;
   cursor: pointer;
 }
@@ -69,19 +68,22 @@ button {
 .container {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100vh;
 }
 .header {
   padding: 5px;
+  flex-shrink: 0;
 }
 .app {
   padding: 5px  ;
+  flex-grow: 1;
 }
 
 .footer {
   background-color: #7c6344dc;
   border-radius: 25vmax;
   align-items: baseline;
+  flex-shrink: 0;
 }
 /* --------------- */
 
